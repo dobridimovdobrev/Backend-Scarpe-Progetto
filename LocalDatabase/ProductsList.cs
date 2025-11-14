@@ -4,7 +4,7 @@ namespace Scarpe___Co_Progetto.LocalDatabase
 {
     public static class ProductsList
     {
-        private static List<Product> _products = new List<Product>
+        private static List<Product> products = new List<Product>
         {
             new Product
             {
@@ -90,12 +90,26 @@ namespace Scarpe___Co_Progetto.LocalDatabase
 
         public static List<Product> GetAll()
         {
-            return _products;
+            return products;
         }
 
         public static Product? GetById(int id)
         {
-            return _products.FirstOrDefault(p => p.Id == id);
+            return products.Find(p => p.Id == id);
+        }
+
+        public static void AddProduct(Product product)
+        {
+            int newId = 1;
+
+            if (products.Count > 0)
+            {
+                int lastId = products[products.Count - 1].Id;
+                newId = lastId + 1;
+            }
+
+            product.Id = newId;
+            products.Add(product);
         }
     }
 }
