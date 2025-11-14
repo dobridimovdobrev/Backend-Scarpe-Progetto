@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Scarpe & Co</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Scarpe___Co_Progetto.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="custom-font">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow  p-4">
+            <div class="container-fluid d-flex justify-content-between">
+                <div>
+                <a class="navbar-brand text-decoration-underline fw-bold fs-3" asp-controller="Home" asp-action="Index">SCARPE&CO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+                <div class="navbar-collapse collapse fw-normal fs-5 justify-content-center ">
+                    <ul class="navbar-nav d-flex gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid p-0">
+        <main role="main" class="pb-3">
+            
+            @RenderBody()
+          
+            
+        </main>
+    </div>
+
+    <div class="cta-section text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1920') center/cover; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div class="container">
+            <p class="text-uppercase fw-bold orange-color mb-3">DOING SPORTS WITH THE BEST</p>
+            <h2 class="display-4 fw-bold mb-4 custom-font">BEAUTIFUL SPORTS APPAREL AND<br />ACCESSORIES</h2>
+            <a href="#" class="btn btn-danger btn-lg px-5 py-3 text-uppercase fw-bold">LET'S DO SOME SHOPPING</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Working Hours -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">WORKING HOURS</h5>
+                    <p class="mb-2">Mon-Fri: 9 AM – 6 PM</p>
+                    <p class="mb-2">Saturday: 9 AM – 4 PM</p>
+                    <p class="mb-2">Sunday: Closed</p>
+                </div>
+
+                <!-- Address -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">ADDRESS</h5>
+                    <p class="mb-2">Great Britain —</p>
+                    <p class="mb-2">30 Coleman Street, Office 350</p>
+                    <p class="mb-3">London, UK EC2R 5AL</p>
+                    <p class="mb-2">info@email.com</p>
+                    <p class="mb-2 fs-5 fw-bold">+1 840 841 25 69</p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none footer-link">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none footer-link">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none footer-link">Shop</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none footer-link">News</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none footer-link">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">GET IN TOUCH</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4 social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4 social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4 social-icon"><i class="bi bi-dribbble"></i></a>
+                        <a href="#" class="text-white fs-4 social-icon"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col text-center">
+                    <p class="mb-0 text-muted">Dobri Dobrev © 2025. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

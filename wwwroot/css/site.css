@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar-brand {
+    text-underline-offset: 7px !important;
+}
+
+.custom-font {
+    font-family: "Oswald", sans-serif;
+}
+
+.custom-margin{
+    margin-top:-100px !important;
+}
+
+nav a{
+    transition:all .3s ;
+}
+
+    nav a:hover {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+    }
+
+.custom-background {
+    background-color: #ECEDEF;
+}
+
+.orange-color {
+    color: #FF6300;
+}
+
+.hero-image{
+    max-width:100%;
+    height:40rem;
+    object-fit:cover;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.thumbnail-img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+    .thumbnail-img:hover {
+        opacity: 1;
+        border-color: #ff6b35 !important;
+    }
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #6c757d;
+}
+
+    .nav-tabs .nav-link.active {
+        border-bottom-color: #000;
+        color: #000;
+        background: none;
+    }
+
+.cursor-pointer {
+    cursor: pointer;
+}

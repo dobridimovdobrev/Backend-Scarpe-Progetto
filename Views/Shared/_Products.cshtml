@@ -1,0 +1,27 @@
+﻿@model List<Scarpe___Co_Progetto.Models.Product>
+
+<!--  prodotti -->
+<div class="container-fluid py-5 bg-light">
+    <div class="text-center mb-5">
+        <p class="text-uppercase fw-bold orange-color mb-2">OUR SHOP</p>
+        <h2 class="display-4 fw-bold custom-font">NEW ARRIVALS</h2>
+    </div>
+
+    <div class="row g-4 px-5">
+        @foreach (var product in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 h-100 product-card">
+                    <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none text-dark">
+                        <div class="card-body text-center bg-white p-4">
+                            <img src="@product.MainImage" alt="@product.Name" class="img-fluid mb-3" />
+                            <h5 class="card-title text-uppercase fw-bold">@product.Name</h5>
+                            <p class="card-text fs-5 fw-bold">$@product.Price</p>
+                            <div class="text-warning">★★★★★</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>  
+</div>
